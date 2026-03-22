@@ -1,0 +1,47 @@
+{
+	"geode": "5.3.0",
+	"gd": {
+		"win": "2.2081",
+		"android": "2.2081",
+		"mac": "2.2081",
+		"ios": "2.2081"
+	},
+	"id": "alphalaneous.awesome_modifier_icons",
+	"name": "Awesome Modifier Icons",
+	"version": "v1.0.11",
+	"developer": "Alphalaneous",
+	"description": "Makes D, J, S, H, and F blocks have icons instead of a letter!",
+	"resources": {
+		"sprites": [
+			"resources/*.png"
+		]
+	},
+	"links": {
+        "homepage": "https://linktr.ee/Alphalaneous",
+        "source": "https://github.com/Alphalaneous/Awesome-Modifier-Icons",
+        "community": "https://discord.gg/Txn2CA5dHF"
+    },
+	"settings": {
+		"solid-border": {
+			"name": "Solid Border",
+			"description": "Makes the border of the blocks solid instead of dotted",
+			"type": "bool",
+			"default": false
+		},
+		"show-letter": {
+			"name": "Show Letters",
+			"description": "Show the letters instead of hiding them",
+			"type": "bool",
+			"default": false
+		},
+		"move-f-block": {
+			"name": "Move F block",
+			"description": "Moves the F block to be next to the other modifier blocks rather than separated by the force blocks.",
+			"type": "bool",
+			"default": true
+		}
+	},
+	"tags": [
+		"editor", "enhancement"
+	]
+}
