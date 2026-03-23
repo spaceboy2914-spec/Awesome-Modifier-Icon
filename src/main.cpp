@@ -10,7 +10,7 @@ constexpr int ELECTRODYNAMIX_ID = 16;
 // Store current level ID
 static int g_currentLevelID = -1;
 
-// Hook LevelInfoLayer to detect which level is open
+// Detect which level is currently open
 class $modify(MyLevelInfoLayer, LevelInfoLayer) {
     bool init(GJGameLevel* level, bool p1) {
         if (!LevelInfoLayer::init(level, p1)) return false;
@@ -23,13 +23,13 @@ class $modify(MyLevelInfoLayer, LevelInfoLayer) {
     }
 };
 
-// Hook difficulty sprite
+// Override difficulty display
 class $modify(MyDifficultySprite, GJDifficultySprite) {
     void updateDifficultyFrame(int difficulty, GJDifficultyName name) {
         // If it's Electrodynamix → force Demon
         if (g_currentLevelID == ELECTRODYNAMIX_ID) {
-            difficulty = 5; // Demon
-            name = GJDifficultyName::Demon;
+            difficulty = 5; // Demon difficulty index
+            name = GJDifficultyName::DEMON; // ✅ correct enum
         }
 
         GJDifficultySprite::updateDifficultyFrame(difficulty, name);
